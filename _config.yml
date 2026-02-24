@@ -19,6 +19,7 @@ latex:
 exclude:
   - references.bib
 
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/executablebooks/jupyter-book  # Online location of your book
