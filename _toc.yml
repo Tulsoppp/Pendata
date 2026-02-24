@@ -2,10 +2,14 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: 240411100157_AHMAD MAULANA ISHAQ
 chapters:
-  - file: Business-Understanding
-  - file: Data-Understanding
-  - file: Data-Preparation
-  - file: Modelling
-  - file: Deploymen
+  - file: business_understanding
+  - file: data_understanding/home
+    sections :
+      - file : data_understanding/collecting_data
+      - file : data_understanding/describe_data
+      - file : data_understanding/exsplorasi_data
+  - file: data-preparation
+  - file: modelling
+  - file: deploymen
