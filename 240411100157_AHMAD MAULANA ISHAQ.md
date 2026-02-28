@@ -16,7 +16,7 @@ kernelspec:
 
 | Keterangan        | Informasi              |
 |-------------------|------------------------|
-| NIM           | 240411100157           |
-| Nama          | Ahmad Maulana Ishaq  |
-| Mata Kuliah   | Penambangan Data       |
-| Kelas         | IF 4B                  |
+| **NIM**           | 240411100157           |
+| **Nama**          | Ahmad Maulana Ishaq  |
+| **Mata Kuliah**   | Penambangan Data       |
+| **Kelas**         | IF 4B                  |
