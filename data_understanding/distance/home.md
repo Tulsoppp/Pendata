@@ -76,6 +76,10 @@ $$
 d_{chord}(x,y) = \left( 2 - 2 \frac{\sum_{i=1}^{n} x_i y_i}{\|x\|_2 \|y\|_2} \right)^{\frac{1}{2}}
 $$
 
+$$
+\|x\|_2 = \sqrt{\sum_{i=1}^{n} x_i^2}
+$$
+
 Digunakan terutama ketika data belum dinormalisasi.
 
 **Mahalanobis Distance**
@@ -91,3 +95,93 @@ Karakteristik:
 - Mengatasi skala yang berbeda dan korelasi antar variabel.
 
 - S⁻¹ adalah invers dari matriks kovarians fitur.
+
+## 2. Mengukur Jarak untuk Data Biner  ##
+Data biner hanya memiliki dua nilai, misalnya 0 dan 1.
+
+**Tabel Kontingensi 2×2**
+
+Untuk dua objek i dan j, hitung jumlah:
+
+- q = jumlah dimensi bernilai 1 pada keduanya
+
+- r = atribut i = 1, j = 0
+
+- s = atribut i = 0, j = 1
+
+- t = atribut 0 pada keduanya
+
+**Jaccard Coefficient (Biner Asimetris)**
+
+Digunakan ketika 1 lebih bermakna daripada 0:
+
+$$
+\text{sim}(x,y) = \frac{q}{q + r + s}
+$$
+$$
+d(x,y) = 1 - \text{sim}(x,y)
+$$
+
+Lebih fokus pada keberadaan fitur daripada ketiadaan.
+
+## 3. Mengukur Jarak untuk Data Kategorikal ##
+
+Data kategorikal memiliki nilai berupa label/kelas (tidak terurut).
+
+**Overlay Metric**
+
+Hitung selisih atribut:
+
+$$
+d(x,y) = \sum_{i=1}^{n} \delta(a_i(x), a_i(y))
+$$
+
+$$
+\delta(a_i(x), a_i(y)) =
+\begin{cases}
+0 & \text{jika } a_i(x) = a_i(y) \\
+1 & \text{jika } a_i(x) \ne a_i(y)
+\end{cases}
+$$
+
+dengan δ = 0 jika sama, 1 jika berbeda
+
+**Value Difference Metric (VDM)**
+
+Memperhitungkan probabilitas kelas berdasarkan nilai fitur:
+
+$$
+d(x,y) = \sum_{i=1}^{n} \sum_{c=1}^{C}
+\left| P(c \mid a_i(x)) - P(c \mid a_i(y)) \right|
+$$
+
+Lebih canggih karena mempertimbangkan distribusi kelas data.
+
+**Minimum Risk Metric (MRM)**
+
+Pendekatan lain yang meminimalkan risiko kesalahan klasifikasi:
+
+$$
+d(x,y) = \sum_{c=1}^{C} P(c \mid x) \left(1 - P(c \mid y)\right)
+$$
+
+Mengurangi risiko kesalahan saat data diprediksi dalam kelas yang berbeda.
+
+## 4. Mengukur Jarak untuk Data Ordinal ##
+
+Data ordinal memiliki tingkatan tetapi selisih antar level tidak pasti.
+Langkah Pengukuran:
+
+1. Ubah kategori ke ranking numerik (mis. 1–M).
+
+2. Normalisasi ranking ke rentang [0,1]:
+
+$$
+Z_k = \frac{r_k - 1}{M - 1}
+$$
+
+3. Hitung jarak numerik standar seperti Manhattan atau Euclidean.
+
+$$
+d(x,y) = \sqrt{\sum_{i=1}^{n} (Z_{xi} - Z_{yi})^2}
+$$
