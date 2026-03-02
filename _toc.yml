@@ -10,6 +10,9 @@ chapters:
       - file : data_understanding/collecting_data
       - file : data_understanding/describe_data
       - file : data_understanding/exsplorasi_data
+      - file : data_understanding/distance/home
+        sections :
+        - file : data_understanding/distance/numerik
   - file: data-preparation
   - file: modelling
   - file: deploymen
