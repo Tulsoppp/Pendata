@@ -1,5 +1,21 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
 # Distance
+
 ## Pengertian Jarak (Distance)
+
 Dalam konteks data mining dan pembelajaran mesin, jarak (distance) adalah ukuran numerik yang menyatakan seberapa mirip atau berbeda dua data/objek. Semakin kecil nilai jaraknya, semakin mirip objek tersebut. Jarak merupakan komponen penting terutama dalam algoritma berbasis jarak seperti klastering (clustering) dan nearest neighbor.
 
 ### 1. Mengukur Jarak untuk Data Numerik (Kontinu)
@@ -96,7 +112,8 @@ Karakteristik:
 
 - S⁻¹ adalah invers dari matriks kovarians fitur.
 
-## 2. Mengukur Jarak untuk Data Biner  ##
+## 2. Mengukur Jarak untuk Data Biner
+
 Data biner hanya memiliki dua nilai, misalnya 0 dan 1.
 
 **Tabel Kontingensi 2×2**
@@ -118,13 +135,14 @@ Digunakan ketika 1 lebih bermakna daripada 0:
 $$
 \text{sim}(x,y) = \frac{q}{q + r + s}
 $$
+
 $$
 d(x,y) = 1 - \text{sim}(x,y)
 $$
 
 Lebih fokus pada keberadaan fitur daripada ketiadaan.
 
-## 3. Mengukur Jarak untuk Data Kategorikal ##
+## 3. Mengukur Jarak untuk Data Kategorikal
 
 Data kategorikal memiliki nilai berupa label/kelas (tidak terurut).
 
@@ -167,7 +185,7 @@ $$
 
 Mengurangi risiko kesalahan saat data diprediksi dalam kelas yang berbeda.
 
-## 4. Mengukur Jarak untuk Data Ordinal ##
+## 4. Mengukur Jarak untuk Data Ordinal
 
 Data ordinal memiliki tingkatan tetapi selisih antar level tidak pasti.
 Langkah Pengukuran:

@@ -32,11 +32,19 @@ https://www.kaggle.com/datasets/arshid/iris-flower-dataset
 
 Dataset ini merupakan salah satu dataset klasik yang sering digunakan dalam pembelajaran data mining dan machine learning untuk klasifikasi.
 
+## Pyton
+
 ```{code-cell}
 import pandas as pd
 df = pd.read_csv("../IRIS.csv")
 df.head(150)
 ```
+
+## CSV
+![Grafik Data](../gambar/csv.png)
+
+## POSGRE
+![Grafik Data](../gambar/posgre.png)
 
 Dataset tersebut memiliki total 150 data (records) dengan 5 fitur (atribut), yaitu:
 
