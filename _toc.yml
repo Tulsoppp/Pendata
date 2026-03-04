@@ -13,6 +13,8 @@ chapters:
       - file : data_understanding/distance/home
         sections :
         - file : data_understanding/distance/numerik
+        - file : data_understanding/distance/binary
+        - file : data_understanding/distance/kategorikal
   - file: data-preparation
   - file: modelling
   - file: deploymen
