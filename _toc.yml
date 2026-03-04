@@ -15,6 +15,8 @@ chapters:
         - file : data_understanding/distance/numerik
         - file : data_understanding/distance/binary
         - file : data_understanding/distance/kategorikal
+        - file : data_understanding/distance/ordinal
+        - file : data_understanding/distance/campuran
   - file: data-preparation
   - file: modelling
   - file: deploymen
