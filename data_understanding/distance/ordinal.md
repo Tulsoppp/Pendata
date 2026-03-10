@@ -141,3 +141,4 @@ distance_ordinal = abs(z1 - z2)
 
 print("Jarak Ordinal BMI:", distance_ordinal)
 ```
+![Grafik Data](../../gambar/ordinal.png)
