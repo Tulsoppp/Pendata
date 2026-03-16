@@ -18,6 +18,12 @@ chapters:
         - file : data_understanding/distance/ordinal
         - file : data_understanding/distance/campuran
         - file : data_understanding/distance/iris
+  - file : Tugas/home
+    sections :
+      - file : Tugas/MVN/wknn
+      - file : Tugas/MVN/Min_Max
+      - file : Tugas/MVN/Z_Score
+      - file : Tugas/MVN/Decimal
   - file: data-preparation
   - file: modelling
   - file: deploymen
