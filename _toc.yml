@@ -24,6 +24,7 @@ chapters:
       - file : Tugas/MVN/Min_Max
       - file : Tugas/MVN/Z_Score
       - file : Tugas/MVN/Decimal
+  - file: uts
   - file: data-preparation
   - file: modelling
   - file: deploymen
