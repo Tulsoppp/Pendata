@@ -158,7 +158,7 @@ Untuk mempermudah proses analisis, digunakan tools **KNIME Analytics Platform**.
 
 KNIME memungkinkan pembuatan workflow berbasis node sehingga proses data mining menjadi lebih visual dan sistematis.
 
-![Grafik Data](gambar/kinem.png)
+![Grafik Data](../gambar/kinem.png)
 
 ---
 
@@ -170,7 +170,7 @@ KNIME memungkinkan pembuatan workflow berbasis node sehingga proses data mining 
 | Missing Value       | Menangani data kosong                                                   | Dataset bersih                                     |
 | One to Many         | Encoding data kategorikal                                               | Data numerik                                       |
 | Normalizer          | Normalisasi Min-Max                                                     | Data skala 0–1                                     |
-| Partitioning        | Membagi data train & test                                               | Data training & testing                            |
+| Partitioning        | Membagi data train 90 % & test      10%                                         | Data training & testing                            |
 | K-Nearest Neighbor  | Proses klasifikasi                                                     | Hasil prediksi                                     |
 | Scorer              | Evaluasi model                                                         | Confusion Matrix & Akurasi                         |
 
@@ -189,7 +189,7 @@ Tanpa normalisasi:
 Dengan normalisasi:
 - Semua fitur memiliki kontribusi yang seimbang
 
-![Grafik Data](gambar/nmuts.png)
+![Grafik Data](../gambar/nmuts.png)
 ---
 
 ### B. K-Nearest Neighbor (KNN)
@@ -205,8 +205,8 @@ Contoh:
 - 2 tetangga = Tidak Subur  
 → Maka hasil = **Subur**
 
-![Grafik Data](gambar/knnuts.png)
-![Grafik Data](gambar/knnuts1.png)
+![Grafik Data](../gambar/knnuts.png)
+![Grafik Data](../gambar/knnuts1.png)
 
 ---
 
@@ -220,7 +220,7 @@ Digunakan Confusion Matrix yang terdiri dari:
 - False Positive (FP)
 - False Negative (FN)
 
-![Grafik Data](gambar/scuts.png)
+![Grafik Data](../gambar/scuts.png)
 
 Dari nilai tersebut dihitung:
 - Accuracy
@@ -228,7 +228,7 @@ Dari nilai tersebut dihitung:
 - Recall
 - F1-Score
 
-![Grafik Data](gambar/tsuts.png)
+![Grafik Data](../gambar/tsuts.png)
 
 Hasil menunjukkan akurasi mencapai **100%**, yang berarti model mampu mengklasifikasikan seluruh data dengan benar.
 
