@@ -25,6 +25,7 @@ chapters:
       - file : Tugas/MVN/Z_Score
       - file : Tugas/MVN/Decimal
   - file: uts
+  - file: naive_bayes
   - file: data-preparation
   - file: modelling
   - file: deploymen
