@@ -28,5 +28,6 @@ chapters:
   - file: naive_bayes
   - file: decission_tree
   - file: data-preparation
+  - file: random-forens
   - file: modelling
   - file: deploymen
