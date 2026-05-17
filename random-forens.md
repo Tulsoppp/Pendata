@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Klasifikasi Tic-Tac-Toe Endgame dengan Random Forest
+# Random-Forest
 
 ## Dataset
 
