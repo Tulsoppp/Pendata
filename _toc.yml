@@ -29,5 +29,6 @@ chapters:
   - file: decission_tree
   - file: data-preparation
   - file: random-forens
+  - file: regresi_linier
   - file: modelling
   - file: deploymen
