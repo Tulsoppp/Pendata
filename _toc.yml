@@ -30,5 +30,5 @@ chapters:
   - file: data-preparation
   - file: random-forens
   - file: regresi_linier
-  - file: modelling
+  - file: peramalan_no2_jombang26
   - file: deploymen
