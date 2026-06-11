@@ -39,6 +39,9 @@ jobs:
           pip install scipy
           pip install scikit-learn
           pip install matplotlib
+          pip install shap 
+          pip install skforecast
+          pip install lightgbm 
       - name: Build HTML Assets
         run: jupyter-book build .
       - name: Upload artifact
