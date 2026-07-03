@@ -32,3 +32,4 @@ chapters:
   - file: regresi_linier
   - file: peramalan_no2_jombang26
   - file: skforecast
+  - file: decission_tree_UAS
