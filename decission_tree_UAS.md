@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Decision Tree
+# Decision Tree UAS
 
 ## Dataset
 
@@ -63,7 +63,7 @@ Berikut fitur-fitur beserta nilai kategorinya (1–10 pertanyaan pribadi, 11–1
 
 Workflow ini dirancang menggunakan tools KNIME untuk membangun model klasifikasi Decision Tree, bertujuan memprediksi nilai akhir (`GRADE`) mahasiswa.
 
-![Workflow KNIME](images/knime_workflow.png)
+![Grafik Data](gambar/dt_uas.png)
 
 Alur node yang digunakan:
 
@@ -85,6 +85,8 @@ Alur node yang digunakan:
 
 ### Partisi
 
+![Grafik Data](gambar/p_uas.png)
+
 Data dibagi menjadi **80% data training dan 20% data testing**.
 
 - Total data: 145 baris
@@ -98,6 +100,8 @@ Distribusi kelas `GRADE` pada data training (hasil partisi stratified):
 | Jumlah | 6 | 28 | 19 | 17 | 8 | 14 | 10 | 14 |
 
 ### Decision Tree Learner
+
+![Grafik Data](gambar/l_uas.png)
 
 Karena *Quality Measure* yang digunakan adalah **Gini index** (bukan Gain Ratio), maka atribut *root* dipilih berdasarkan **Gini Index terkecil** (bukan Gain Ratio terbesar), dengan rumus sebagai berikut:
 
@@ -201,9 +205,10 @@ Karena `COURSE ID` memiliki $Gini_{split}$ terkecil dibanding 30 atribut lainnya
 
 #### Tree
 
+![Grafik Data](gambar/phn_uas.png)
+
 Pohon keputusan penuh yang terbentuk berukuran cukup besar (kedalaman lebih dari 10 level, puluhan leaf node) — wajar karena label memiliki 8 kelas, `Minimum records per node` kecil (2), dan tanpa pruning. Berikut cuplikan **3 level teratas** pohon (mulai dari root `COURSE ID`) sebagai ilustrasi struktur pemisahan berbasis Gini index:
 
-![Cuplikan Decision Tree (Gini Index)](images/tree_view_gini.png)
 
 > Catatan teknis: ilustrasi pohon di atas dibangun ulang di Python (scikit-learn, `criterion='gini'`) untuk keperluan visualisasi konsep pemisahan Gini, sehingga secara struktur detail bisa sedikit berbeda dari `Decision Tree View` asli di KNIME (yang memakai *multi-way split* native, bukan pendekatan biner). Nilai `Gini Split` dan atribut *root* pada perhitungan manual di atas tetap dihitung langsung dari data asli tanpa modifikasi.
 
@@ -212,6 +217,8 @@ Pohon keputusan penuh yang terbentuk berukuran cukup besar (kedalaman lebih dari
 Model yang telah dipelajari dari data *training* (116 baris) diterapkan ke **29 baris data testing** untuk memprediksi `GRADE` masing-masing mahasiswa.
 
 #### Confusion Matrix
+
+![Grafik Data](gambar/cm_uas.png)
 
 Berikut hasil **Scorer** langsung dari workflow KNIME (per kelas, format *one-vs-rest*: True Positive, False Positive, True Negative, False Negative):
 
@@ -231,6 +238,8 @@ Berikut hasil **Scorer** langsung dari workflow KNIME (per kelas, format *one-vs
 Total prediksi benar (jumlah TP semua kelas) = 1+0+0+0+1+2+0+0 = **4 dari 29 data testing**.
 
 #### Akurasi
+
+![Grafik Data](gambar/a_uas.png)
 
 $$
 Akurasi = \frac{\sum TP}{Total\ data\ testing} = \frac{4}{29} = 0{,}1379 \approx \mathbf{13{,}8\%}
