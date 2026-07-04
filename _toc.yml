@@ -27,7 +27,7 @@ chapters:
   - file: uts
   - file: naive_bayes
   - file: decission_tree
-  - file: data-preparation
+  - file: Data-Preparation
   - file: random-forens
   - file: regresi_linier
   - file: peramalan_no2_jombang26

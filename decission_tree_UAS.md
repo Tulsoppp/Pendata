@@ -124,7 +124,21 @@ Semakin kecil nilai $Gini_{split}$ suatu atribut (atau semakin besar $\Delta Gin
 Pada data training (116 baris), distribusi kelas `GRADE` adalah 8 kelas (0 sampai 7) dengan jumlah seperti tabel partisi di atas.
 
 $$
-Gini(root) = 1 - \sum_{j=0}^{7}\left(\frac{n_j}{116}\right)^2 = 1 - \left[\left(\tfrac{6}{116}\right)^2+\left(\tfrac{28}{116}\right)^2+\left(\tfrac{19}{116}\right)^2+\left(\tfrac{17}{116}\right)^2+\left(\tfrac{8}{116}\right)^2+\left(\tfrac{14}{116}\right)^2+\left(\tfrac{10}{116}\right)^2+\left(\tfrac{14}{116}\right)^2\right] = 0{,}8494
+\begin{aligned}
+Gini(\text{root})
+&=1-\sum_{j=0}^{7}\left(\frac{n_j}{116}\right)^2\\
+&=1-\left[
+\left(\frac{6}{116}\right)^2+
+\left(\frac{28}{116}\right)^2+
+\left(\frac{19}{116}\right)^2+
+\left(\frac{17}{116}\right)^2+
+\left(\frac{8}{116}\right)^2+
+\left(\frac{14}{116}\right)^2+
+\left(\frac{10}{116}\right)^2+
+\left(\frac{14}{116}\right)^2
+\right]\\
+&=0.8494
+\end{aligned}
 $$
 
 Nilai ini cukup tinggi (mendekati Gini maksimum untuk 8 kelas, yaitu $1-\tfrac18=0{,}875$), yang wajar karena label `GRADE` tersebar ke 8 kelas dan tidak dominan pada satu kelas saja.
@@ -190,13 +204,38 @@ Atribut `COURSE ID` memiliki 9 nilai unik (kode mata kuliah 1–9). Gini index d
 2. **Hitung Gini Split**
 
 $$
-Gini_{split}(COURSE\ ID) = \sum_{i=1}^{9}\frac{n_i}{116}Gini(i) = \tfrac{51}{116}(0{,}7682)+\tfrac{1}{116}(0)+\cdots+\tfrac{16}{116}(0{,}7891) = 0{,}6859
+\begin{aligned}
+Gini_{\text{split}}(\text{COURSE\_ID})
+&=
+\sum_{i=1}^{9}
+\frac{n_i}{116}
+\,Gini(i)\\
+&=
+\frac{51}{116}(0.7682)
++
+\frac{1}{116}(0)
++\cdots+
+\frac{16}{116}(0.7891)\\
+&=0.6859
+\end{aligned}
 $$
 
 3. **Hitung ΔGini**
 
 $$
-\Delta Gini_{COURSE\ ID} = Gini(root) - Gini_{split} = 0{,}8494 - 0{,}6859 = 0{,}1635
+\begin{aligned}
+\Delta Gini_{\text{COURSE\_ID}}
+&=
+Gini(\text{root})
+-
+Gini_{\text{split}}\\
+&=
+0.8494
+-
+0.6859\\
+&=
+0.1635
+\end{aligned}
 $$
 
 Karena `COURSE ID` memiliki $Gini_{split}$ terkecil dibanding 30 atribut lainnya, atribut ini dipilih sebagai **Root Node**.
